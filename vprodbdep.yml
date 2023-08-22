@@ -32,8 +32,8 @@ spec:
              secretKeyRef:
                name: app-secret
                key: db-pass
-      #nodeSelector:
-        #topology.kubernetes.io/zone: us-east-1a
+      nodeSelector:
+        topology.kubernetes.io/zone: us-east-1a
       volumes:
         - name: vpro-db-data
           # This AWS EBS volume must already exist.
